@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+  <title>Художник Константинов Константин</title>
+<style>
+  .carousel-item img {
+    height: 300px;
+  }
+  @media (min-width: 1100px) {
+    .carousel-item img {
+      height: 400px;
+  }
+  }
+
+  .img-into-box {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .box-height {
+    height: 200px;
+  }
+  @media (max-width: 600px) {
+    .box-height {
+      height: 130px;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+</style>
+</head>
+<body class="fs-5">
+
+<!-- Навигация -->
+<nav class="navbar navbar-expand-sm navbar-dark fs-6 p-1" style="background-color: #44464c;">
+  <div class="container">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="#galery">Галерея</a>
+        <a class="nav-link" href="#availability">В наличии</a>
+        <a class="nav-link" href="#contacts">Контакты</a>
+      </div>
+    </div>
+
+    <span class="navbar-text">
+      Рус / <a href="">En</a>
+    </span>
+
+  </div>
+</nav>
+
+<!-- Слайдшоу -->
+<header class="my-4">
+  <div class="container">
+    <h1 class="h2 text-center mb-3 ">
+      Константинов Константин Константинович
+      <span class="lead fs-5 d-block text-secondary">художник-живописец, профессор Академии им. Штиглица</span>
+    </h1>
+    
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://sun9-10.userapi.com/impf/c837126/v837126921/4023d/YXEcT-8ihn8.jpg?size=2000x1333&quality=96&sign=9fe623d7cda36939a11e6ef612404ce1&type=album" class="d-block w-100" alt="..." style="object-fit:cover;  object-position: center 40%;">
+        </div>
+        <div class="carousel-item">
+          <img src="https://sun9-19.userapi.com/impf/c840431/v840431975/9ba9/yqJOcxxIhYM.jpg?size=2000x1484&quality=96&sign=729e832048b5a7312872776e7cfeaa81&type=album" class="d-block w-100" alt="..." style="object-fit:cover; object-position: center 30%;">
+        </div>
+        <div class="carousel-item">
+          <img src="https://sun9-14.userapi.com/impf/c837732/v837732921/218c8/QL3myFGOGXo.jpg?size=2000x1333&quality=96&sign=f9baa842eecb049a56dd3be16b3e2d27&type=album" class="d-block w-100" alt="..." style="object-fit:cover; object-position: center;">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Предыдущий</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Следующий</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Биография -->
+  <section class="pb-5">
+    <div class="container">
+      <h3>Биография</h3>
+      <ul>
+        <li>1968 года рождения.</li>
+        <li>Закончил Академию Художеств имени И. Е. Репина</li>
+        <li>Член Союза Художников России</li>
+        <li>Действующий преподаватель Академии им. А. Л. Штиглица в звании профессора.</li>
+        <li>Награжден орденом Святой Анны III-ей степени </li>
+      </ul>
+      <p class="text-end"><a href="#" data-bs-toggle="modal" data-bs-target="#bioModal">Подробная биография</a></p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="bioModal" tabindex="-1" aria-labelledby="exampleModalLabel0" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel0">Биография></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Константинов Константин Константинович, 1968 года рождения.<br>
+
+            В 2001 году окончил Санкт-Петербургскую Академию Художеств имени И. Е. Репина по специальности художник-живописец.<br>
+            
+            Являюсь членом Союза Художников России с 2002 года.<br>
+            
+            Преподаю в Санкт-Петербургской государственной художественной Академии им. А. Л. Штиглица в звании профессора.<br>
+            
+            Занимаюсь творческой деятельностью, участвую в государственных проектах, лауреат международных и всероссийских выставок.<br><br>
+
+            Одни из значимых проектов:
+            <ul>
+                <li>Участие в росписи Храма Христа Спасителя в Москве.</li>
+                <li>Воссоздание Морского Никольского собора (г. Кронштадт). Руководил бригадой численностью 250 человек и расписывал верхний и нижний храм.</li>
+            </ul>
+            Награды:
+            <ul>
+                <li>Медаль Императорского ордена Святой Анны III-ей степени.</li>
+                <li>Медаль о воссоздании Кронштадтского Морского Собора.</li>
+                <li>Патриаршая грамота от Кирилла.</li>
+                <li>Серебряная медаль Российской Академии художеств (2014 г.).</li>
+                <li>и другие награды.</li>
+            </ul>
+            О себе: <br>
+            Занимаюсь живописью, потому что мне это нравится, это моя страсть. Люблю писать портреты, т.к. каждый человек индивидуален и хранит в себе много тайн. Когда пишу древность, то стараюсь сохранить историю для потомков. Стараюсь чаще выходить на пленэры, потому что в картинах созданных с натуры больше энергии и жизни.
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Галерея -->
+  <section id="galery" class="py-5" style="background-color: #f2f2f2;">
+    <div class="container">
+      <!-- Портреты -->
+      <section class="">
+        <h3>Портреты
+          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 1.3rem;" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+          </a>
+        </h3>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Классический портрет</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Портрет пишется маслом, пастелью, карандашом или другим материалом, исходя из Ваших интересов и поставленных задач.
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+  
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery" href="https://sun9-17.userapi.com/impf/c636724/v636724921/64096/FMYsO2HEnoI.jpg?size=1620x2000&quality=96&sign=dd526c6e4a48eb69b04f2021c6a2902f&type=album">
+              <img src="https://sun9-17.userapi.com/impf/c636724/v636724921/64096/FMYsO2HEnoI.jpg?size=1620x2000&quality=96&sign=dd526c6e4a48eb69b04f2021c6a2902f&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery" href="https://sun9-69.userapi.com/impf/c837138/v837138921/13ee5/FVlN1n_6vt4.jpg?size=816x1080&quality=96&sign=d109ea6aacf56fda2d1481528702b51a&type=album">
+              <img src="https://sun9-69.userapi.com/impf/c837138/v837138921/13ee5/FVlN1n_6vt4.jpg?size=816x1080&quality=96&sign=d109ea6aacf56fda2d1481528702b51a&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery" href="https://sun9-29.userapi.com/impf/c636717/v636717921/51faf/aWYmMsPxTCk.jpg?size=1524x2160&quality=96&sign=3331bfd92493574e43e0ded88b90b139&type=album">
+              <img src="https://sun9-29.userapi.com/impf/c636717/v636717921/51faf/aWYmMsPxTCk.jpg?size=1524x2160&quality=96&sign=3331bfd92493574e43e0ded88b90b139&type=album" class="img-into-box">
+            </a>
+          </div>
+  
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery" href="https://sun9-54.userapi.com/impf/c837137/v837137921/16094/EpJ3lk9ctDo.jpg?size=700x571&quality=96&sign=8f069b288e4866b06eb19095b29e2d89&type=album">
+              <img src="https://sun9-54.userapi.com/impf/c837137/v837137921/16094/EpJ3lk9ctDo.jpg?size=700x571&quality=96&sign=8f069b288e4866b06eb19095b29e2d89&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery" href="https://sun9-63.userapi.com/impf/c837731/v837731921/24ed0/-EXJprgIOW8.jpg?size=1393x2160&quality=96&sign=6184b7cdd2178c6b0c2c8cbbae30e22c&type=album">
+              <img src="https://sun9-63.userapi.com/impf/c837731/v837731921/24ed0/-EXJprgIOW8.jpg?size=1393x2160&quality=96&sign=6184b7cdd2178c6b0c2c8cbbae30e22c&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery" href="https://sun9-48.userapi.com/impf/c837138/v837138921/15d66/WYw-5KVZEs8.jpg?size=2281x2160&quality=96&sign=fcd5ec45b15a21ecb8555bd12a1137e3&type=album">
+              <img src="https://sun9-48.userapi.com/impf/c837138/v837138921/15d66/WYw-5KVZEs8.jpg?size=2281x2160&quality=96&sign=fcd5ec45b15a21ecb8555bd12a1137e3&type=album" class="img-into-box">
+            </a>
+          </div>
+        </div>
+        <p class="text-center"><a href="#">Загрузить ещё</a></p>
+      </section>
+      
+      <!-- Поп-арт портреты -->
+      <section class="">
+        <h3>Поп-арт портреты
+          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 1.3rem;" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+          </a>
+        </h3>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Поп-арт портрет</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Это портрет сделанный в современном стиле, с добавлением традиций живописи великих мастеров прошлого.
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+  
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery2" href="https://sun9-29.userapi.com/impf/c638420/v638420921/509ee/Z9CWAjIAWwU.jpg?size=769x1080&quality=96&sign=66aca06fa97a03d2e830692a8be082ba&type=album">
+              <img src="https://sun9-29.userapi.com/impf/c638420/v638420921/509ee/Z9CWAjIAWwU.jpg?size=769x1080&quality=96&sign=66aca06fa97a03d2e830692a8be082ba&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery2" href="https://sun9-43.userapi.com/impf/c638420/v638420921/509f8/e0G7m3d2WPU.jpg?size=777x1080&quality=96&sign=ac37b1eb3e40970370b95a83f869b035&type=album">
+              <img src="https://sun9-43.userapi.com/impf/c638420/v638420921/509f8/e0G7m3d2WPU.jpg?size=777x1080&quality=96&sign=ac37b1eb3e40970370b95a83f869b035&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery2" href="https://sun9-23.userapi.com/impf/c837138/v837138921/14304/7x5So0nUb8A.jpg?size=757x1080&quality=96&sign=bef9c3b8058c7e2b6c0c59338755be1a&type=album">
+              <img src="https://sun9-23.userapi.com/impf/c837138/v837138921/14304/7x5So0nUb8A.jpg?size=757x1080&quality=96&sign=bef9c3b8058c7e2b6c0c59338755be1a&type=album" class="img-into-box">
+            </a>
+          </div>
+  
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery2" href="https://sun9-44.userapi.com/impf/c837138/v837138921/1430e/7U4UdwPRKO0.jpg?size=856x1080&quality=96&sign=8a56b20242bbf7b2b199b606fbd1bf2b&type=album">
+              <img src="https://sun9-44.userapi.com/impf/c837138/v837138921/1430e/7U4UdwPRKO0.jpg?size=856x1080&quality=96&sign=8a56b20242bbf7b2b199b606fbd1bf2b&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery2" href="https://sun9-57.userapi.com/impf/c638420/v638420921/50a1f/8SUWWGjpGSE.jpg?size=1065x1080&quality=96&sign=f92fd5f3cf00b28f0834d0c707236482&type=album">
+              <img src="https://sun9-57.userapi.com/impf/c638420/v638420921/50a1f/8SUWWGjpGSE.jpg?size=1065x1080&quality=96&sign=f92fd5f3cf00b28f0834d0c707236482&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery2" href="https://sun9-23.userapi.com/impf/c638420/v638420921/50a29/IkN--ZgyOcA.jpg?size=1280x964&quality=96&sign=f10b9dea061a67fcda16c137e3860309&type=album">
+              <img src="https://sun9-23.userapi.com/impf/c638420/v638420921/50a29/IkN--ZgyOcA.jpg?size=1280x964&quality=96&sign=f10b9dea061a67fcda16c137e3860309&type=album" class="img-into-box">
+            </a>
+          </div>
+        </div>
+        <p class="text-center"><a href="#">Загрузить ещё</a></p>
+      </section>
+
+      <!-- Фотографии с мастер-классов -->
+      <section class="">
+        <h3>Фотографии с мастер-классов
+          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 1.3rem;" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+          </a>
+        </h3>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel3">Индивидуальный мастер-класс</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Картина маслом за 3 часа! <br>
+                Вместе со мной Вы напишете картину маслом на холсте.
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+  
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery3" href="https://sun9-60.userapi.com/impf/c837732/v837732921/215d7/d1QB_tt55AU.jpg?size=1079x1080&quality=96&sign=39058b46c97d5fc531d3a82f03f8e120&type=album">
+              <img src="https://sun9-60.userapi.com/impf/c837732/v837732921/215d7/d1QB_tt55AU.jpg?size=1079x1080&quality=96&sign=39058b46c97d5fc531d3a82f03f8e120&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery3" href="https://sun9-52.userapi.com/impf/c837732/v837732921/215eb/TCf4ujybZ2M.jpg?size=1280x836&quality=96&sign=0f5ff0a29a280a2b1ed74c217f6bf458&type=album">
+              <img src="https://sun9-52.userapi.com/impf/c837732/v837732921/215eb/TCf4ujybZ2M.jpg?size=1280x836&quality=96&sign=0f5ff0a29a280a2b1ed74c217f6bf458&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery3" href="https://sun9-52.userapi.com/impf/c837732/v837732921/215e1/8A99JprKtdA.jpg?size=1280x860&quality=96&sign=1e5c7767d8b94e67d92ce08959611e82&type=album">
+              <img src="https://sun9-52.userapi.com/impf/c837732/v837732921/215e1/8A99JprKtdA.jpg?size=1280x860&quality=96&sign=1e5c7767d8b94e67d92ce08959611e82&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery3" href="https://sun9-57.userapi.com/impf/c857236/v857236239/304ea/n0PDiQ6Njmw.jpg?size=810x1080&quality=96&sign=7db190d13e3d0496c74d57164ada846b&type=album">
+              <img src="https://sun9-57.userapi.com/impf/c857236/v857236239/304ea/n0PDiQ6Njmw.jpg?size=810x1080&quality=96&sign=7db190d13e3d0496c74d57164ada846b&type=album" class="img-into-box">
+            </a>
+          </div>
+      
+          <div class="col-4 col-md-3 col-lg-2 mb-3 box-height ">
+            <a data-fancybox="gallery3" href="https://sun9-46.userapi.com/impf/c854224/v854224239/14f487/ggm4aw8H_rc.jpg?size=1152x864&quality=96&sign=9ae5fc7e005802ec9c50c9883d0e75b7&type=album">
+              <img src="https://sun9-46.userapi.com/impf/c854224/v854224239/14f487/ggm4aw8H_rc.jpg?size=1152x864&quality=96&sign=9ae5fc7e005802ec9c50c9883d0e75b7&type=album" class="img-into-box">
+            </a>
+          </div>
+  
+        </div>
+      </section>
+    </div>
+    
+  </section>
+
+  <!-- Награды -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center h1 mb-4" style="text-transform: uppercase;">Награды</h2>
+      <div class="row">
+        
+        <div class="col-4 col-md-3 col-lg-2 mb-3 " style="height: 150px">
+          <a data-fancybox="gallery4" href="http://k-konstantinov.ru/img/gramota/001.jpg">
+            <img src="http://k-konstantinov.ru/img/gramota/001.jpg" class="" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+          </a>
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 mb-3 " style="height: 150px">
+          <a data-fancybox="gallery4" href="http://k-konstantinov.ru/img/gramota/002.jpg">
+            <img src="http://k-konstantinov.ru/img/gramota/002.jpg" class="" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+          </a>
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 mb-3 " style="height: 150px">
+          <a data-fancybox="gallery4" href="http://k-konstantinov.ru/img/gramota/003.jpg">
+            <img src="http://k-konstantinov.ru/img/gramota/003.jpg" class="" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+          </a>
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 mb-3 " style="height: 150px">
+          <a data-fancybox="gallery4" href="http://k-konstantinov.ru/img/gramota/004.jpg">
+            <img src="http://k-konstantinov.ru/img/gramota/004.jpg" class="" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+          </a>
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 mb-3 " style="height: 150px">
+          <a data-fancybox="gallery4" href="http://k-konstantinov.ru/img/gramota/005.jpg">
+            <img src="http://k-konstantinov.ru/img/gramota/005.jpg" class="" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+          </a>
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 mb-3 " style="height: 150px">
+          <a data-fancybox="gallery4" href="http://k-konstantinov.ru/img/gramota/006.jpg">
+            <img src="http://k-konstantinov.ru/img/gramota/006.jpg" class="" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+          </a>
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 mb-3 " style="height: 150px">
+          <a data-fancybox="gallery4" href="http://k-konstantinov.ru/img/gramota/007.jpg">
+            <img src="http://k-konstantinov.ru/img/gramota/007.jpg" class="" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+          </a>
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 mb-3 " style="height: 150px">
+          <a data-fancybox="gallery4" href="http://k-konstantinov.ru/img/gramota/008.jpg">
+            <img src="http://k-konstantinov.ru/img/gramota/008.jpg" class="" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+          </a>
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 mb-3 " style="height: 150px">
+          <a data-fancybox="gallery4" href="http://k-konstantinov.ru/img/gramota/009.jpg">
+            <img src="http://k-konstantinov.ru/img/gramota/009.jpg" class="" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+          </a>
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 mb-3 " style="height: 150px">
+          <a data-fancybox="gallery4" href="http://k-konstantinov.ru/img/gramota/010.jpg">
+            <img src="http://k-konstantinov.ru/img/gramota/010.jpg" class="" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Публикации в СМИ -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center h1 mb-4" style="text-transform: uppercase;">Публикации в СМИ и на ТВ</h2>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="row">
+
+            <div class="col-4 mb-3" style="height: 150px;">
+							<a data-fancybox="gallery5" href="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_001.jpg" >
+                <img src="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_001.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+							</a>
+						</div>
+            <div class="col-4 mb-3" style="height: 150px;">
+							<a data-fancybox="gallery5" href="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_002.jpg" >
+                <img src="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_002.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+							</a>
+						</div>
+            <div class="col-4 mb-3" style="height: 150px;">
+							<a data-fancybox="gallery5" href="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_001.jpg" >
+                <img src="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_003.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+							</a>
+						</div>
+            <div class="col-4 mb-3" style="height: 150px;">
+							<a data-fancybox="gallery5" href="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_001.jpg" >
+                <img src="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_004.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+							</a>
+						</div>
+            <div class="col-4 mb-3" style="height: 150px;">
+							<a data-fancybox="gallery5" href="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_001.jpg" >
+                <img src="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_005.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+							</a>
+						</div>
+            <div class="col-4 mb-3" style="height: 150px;">
+							<a data-fancybox="gallery5" href="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_001.jpg" >
+                <img src="http://k-konstantinov.ru/img/pressa/konstantinov_konstantin_hudozhnik_006.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+							</a>
+						</div>
+            
+
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6" style="min-height: 300px;">
+            <iframe style="width: 100%; height: 100%;" src="https://www.youtube.com/embed/4kh7OvAgqH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+        
+    </div>
+  </section>
+
+  <!-- Картины в наличии -->
+  <section id="availability" class="py-5" style="background-color: #f2f2f2;">
+    <div class="container">
+      <h2 class="mb-3">Картины в наличии
+        <a href="#">
+          <img src="http://cdn.onlinewebfonts.com/svg/img_326455.png" alt="" style="max-height: 1.3rem;">
+        </a>
+      </h2>
+      <div class="row">
+  
+        <div class="col-6 col-md-4 col-lg-3 mb-3" style="height: 170px;">
+          <a data-fancybox="gallery6" href="https://sun9-62.userapi.com/impf/c837732/v837732921/213bd/Nus3gOKoe9g.jpg?size=1280x939&quality=96&sign=410d864ea63044ee9f39c68a01e4eb1a&type=album">
+            <img src="https://sun9-62.userapi.com/impf/c837732/v837732921/213bd/Nus3gOKoe9g.jpg?size=1280x939&quality=96&sign=410d864ea63044ee9f39c68a01e4eb1a&type=album" class="img-into-box">
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3" style="height: 170px;">
+          <a data-fancybox="gallery6" href="https://sun9-48.userapi.com/impf/c837732/v837732921/206ce/uRKosTJ4RCM.jpg?size=1280x909&quality=96&sign=1abb37983d6e87a26914041b6f61b07a&type=album">
+            <img src="https://sun9-48.userapi.com/impf/c837732/v837732921/206ce/uRKosTJ4RCM.jpg?size=1280x909&quality=96&sign=1abb37983d6e87a26914041b6f61b07a&type=album" class="img-into-box">
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3" style="height: 170px;">
+          <a data-fancybox="gallery6" href="https://sun9-51.userapi.com/impf/c837738/v837738921/2c0b6/DmnsFAQvZmc.jpg?size=1280x1044&quality=96&sign=8429e02229dc3bfc1beb7900204f1e77&type=album">
+            <img src="https://sun9-51.userapi.com/impf/c837738/v837738921/2c0b6/DmnsFAQvZmc.jpg?size=1280x1044&quality=96&sign=8429e02229dc3bfc1beb7900204f1e77&type=album" class="img-into-box">
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3" style="height: 170px;">
+          <a data-fancybox="gallery6" href="https://sun9-47.userapi.com/impf/c837738/v837738921/2c0ac/og5EuKEfQEM.jpg?size=1280x915&quality=96&sign=945666e2d719a035472fc51eb2fbf8b0&type=album">
+            <img src="https://sun9-47.userapi.com/impf/c837738/v837738921/2c0ac/og5EuKEfQEM.jpg?size=1280x915&quality=96&sign=945666e2d719a035472fc51eb2fbf8b0&type=album" class="img-into-box">
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3" style="height: 170px;">
+          <a data-fancybox="gallery6" href="https://sun9-64.userapi.com/impf/c837137/v837137921/2faf3/MPxmWtE3h_c.jpg?size=1280x943&quality=96&sign=e77a362eb030aecfcee8545cd8eb1bfb&type=album">
+            <img src="https://sun9-64.userapi.com/impf/c837137/v837137921/2faf3/MPxmWtE3h_c.jpg?size=1280x943&quality=96&sign=e77a362eb030aecfcee8545cd8eb1bfb&type=album" class="img-into-box">
+          </a>
+        </div>
+        <p class="text-center"><a href="#">Загрузить ещё</a></p>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- Как заказать картину -->
+  <section class="py-5">
+    <div class="container">
+      <h3>Как заказать картину?</h3>
+      <ol>
+        <li>Чтобы заказать картину, свяжитесь со мной удобным для Вас способом: телефон, whatsApp, e-mail.</li>
+        <li>При заказе портрета по фотографии присылайте фото на e-mail. Если уже определились с размером холста, то укажите и этот параметр.</li>
+        <li>Стоимость рассчитывается индивидуально для каждой работы. Картину можно будет забрать у меня в мастерской или отправлю службой доставки.</li>
+        <li class="list-inline-item mt-2">Буду рад сотрудничеству!</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contacts" class="py-5" style="background-color: #f2f2f2;">
+    <div class="container">
+      <h3>Контакты</h3>
+      <ul>
+        <li>Телефон: <a href="tel:+79215778927">+7921-577-89-27</a> // <a href="https://wa.me/79215778927">написать в WhatsApp</a></li>
+        <li>E-mail: <a href="mailto:konstantinovu@gmail.com">konstantinovu@gmail.com</a></li>
+        <li>Город: Санкт-Петербург, Россия</li>
+        <li>Инстаграм: <a href="https://www.instagram.com/kkk_spb">@kkk_spb</a></li>
+      </ul>
+    </div>
+  </section>
+  <hr class="m-0">
+</main>
+
+<footer class="text-center fs-6 py-3" style="background-color: #f2f2f2;">
+  © 2021. Константинов Константин Константинович
+</footer>
+
+
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<!-- FancyBox -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script>
+  
+  let buttonItems = document.querySelectorAll('a[href="#"]');
+  for (let index = 0; index < buttonItems.length; index++) {
+    const button = buttonItems[index];
+    button.addEventListener('click', function (event) {
+        console.log('click');
+        event.preventDefault();
+    });
+  }
+
+</script>
+</body>
+</html>
