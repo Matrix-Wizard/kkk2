@@ -14,14 +14,6 @@
 
   <title>Художник Константинов Константин</title>
 <style>
-  .carousel-item img {
-    height: 300px;
-  }
-  @media (min-width: 1100px) {
-    .carousel-item img {
-      height: 400px;
-  }
-  }
 
   .img-into-box {
     object-fit: cover;
@@ -40,6 +32,29 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Condensed', sans-serif;
   }
+
+  .bio-foto img {
+    max-width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 3px;
+  }
+
+  /* Карусель - слайдшоу */
+  .carousel-inner img {
+      object-fit: cover;
+      height: 400px;
+    }
+    @media (max-width: 600px) {
+      .carousel-inner img {
+        height: 300px;
+      }
+    }
+    @media (min-width: 1140px) {
+      .carousel-inner img {
+        height: 500px;
+      }
+    }
 </style>
 </head>
 <body class="fs-5">
@@ -69,29 +84,52 @@
 
 <!-- Слайдшоу -->
 <header class="my-4">
-  <div class="container">
-    <h1 class="h2 text-center mb-3 ">
+  <div class="container-lg px-0 px-lg-2">
+    <h1 class="h2 text-center mb-3 px-2 ">
       Константинов Константин Константинович
       <span class="lead fs-5 d-block text-secondary">художник-живописец, профессор Академии им. Штиглица</span>
     </h1>
     
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
       <div class="carousel-indicators">
+  
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide5"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+  
       </div>
+  
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://sun9-10.userapi.com/impf/c837126/v837126921/4023d/YXEcT-8ihn8.jpg?size=2000x1333&quality=96&sign=9fe623d7cda36939a11e6ef612404ce1&type=album" class="d-block w-100" alt="..." style="object-fit:cover;  object-position: center 40%;">
+          <img src="img/slider/b1.JPG" class="d-block w-100" alt="...">
         </div>
+        
         <div class="carousel-item">
-          <img src="https://sun9-19.userapi.com/impf/c840431/v840431975/9ba9/yqJOcxxIhYM.jpg?size=2000x1484&quality=96&sign=729e832048b5a7312872776e7cfeaa81&type=album" class="d-block w-100" alt="..." style="object-fit:cover; object-position: center 30%;">
+          <img src="img/slider/b2.JPG" class="d-block w-100" alt="...">
         </div>
+  
         <div class="carousel-item">
-          <img src="https://sun9-14.userapi.com/impf/c837732/v837732921/218c8/QL3myFGOGXo.jpg?size=2000x1333&quality=96&sign=f9baa842eecb049a56dd3be16b3e2d27&type=album" class="d-block w-100" alt="..." style="object-fit:cover; object-position: center;">
+          <img src="img/slider/b3.JPG" class="d-block w-100" alt="..." style="object-position: top;">
         </div>
+  
+        <div class="carousel-item">
+          <img src="img/slider/b4.JPG" class="d-block w-100" alt="...">
+        </div>
+  
+        <div class="carousel-item">
+          <img src="img/slider/b5.JPG" class="d-block w-100" alt="..." style="object-position: top;">
+        </div>
+  
+        <div class="carousel-item">
+          <img src="img/slider/b6.JPG" class="d-block w-100" alt="..." style="object-position: 25% center;">
+        </div>
+  
+  
       </div>
+  
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Предыдущий</span>
@@ -101,6 +139,7 @@
         <span class="visually-hidden">Следующий</span>
       </button>
     </div>
+
   </div>
 </header>
 
@@ -111,7 +150,7 @@
     <div class="container">
       <h3>Биография</h3>
       <ul>
-        <li>Закончил Академию Художеств имени И. Е. Репина</li>
+        <li>Высшее художественное образование - Академия Художеств имени И. Е. Репина</li>
         <li>Член Союза Художников России</li>
         <li>Действующий преподаватель Академии им. А. Л. Штиглица в звании профессора.</li>
         <li>Награжден орденом Святой Анны III-ей степени </li>
@@ -121,7 +160,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="bioModal" tabindex="-1" aria-labelledby="exampleModalLabel0" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-dialog modal-xl modal-dialog-scrollable modal-fullscreen-md-down">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel0">Биография></h5>
@@ -136,24 +175,57 @@
             
             Преподаю в Санкт-Петербургской государственной художественной Академии им. А. Л. Штиглица в звании профессора.<br>
             
-            Занимаюсь творческой деятельностью, участвую в государственных проектах, лауреат международных и всероссийских выставок.<br><br>
+            Занимаюсь творческой деятельностью, участвую в государственных проектах, лауреат международных и всероссийских выставок.<br>
+
+            <div class="bio-foto mb-3 mt-2">
+              <img src="img/bio/learn1.jpg" alt="">
+              <img src="img/bio/learn2.jpg" alt="">
+              <img src="img/bio/learn3.jpg" alt="">
+              <img src="img/bio/learn4.jpg" alt="">
+              <img src="img/bio/learn5.jpg" alt="">
+            </div>
 
             Одни из значимых проектов:
             <ul>
                 <li>Участие в росписи Храма Христа Спасителя в Москве.</li>
                 <li>Воссоздание Морского Никольского собора (г. Кронштадт). Руководил бригадой численностью 250 человек и расписывал верхний и нижний храм.</li>
             </ul>
+
+            <div class="bio-foto mb-3 mt-2">
+              <img src="img/bio/projects (1).jpg" alt="">
+              <img src="img/bio/projects (2).jpg" alt="">
+              <img src="img/bio/projects (3).jpg" alt="">
+            </div>
+
             Награды:
             <ul>
                 <li>Медаль Императорского ордена Святой Анны III-ей степени.</li>
                 <li>Медаль о воссоздании Кронштадтского Морского Собора.</li>
+                <li>Патриаршая грамота от Алексия II.</li>
                 <li>Патриаршая грамота от Кирилла.</li>
                 <li>Серебряная медаль Российской Академии художеств (2014 г.).</li>
                 <li>и другие награды.</li>
             </ul>
+
+            <div class="bio-foto mb-3 mt-2">
+              <img src="img/bio/awards (1).jpg" alt="">
+              <img src="img/bio/awards (2).jpg" alt="">
+              <img src="img/bio/awards (3).jpg" alt="">
+              <img src="img/bio/awards (4).jpg" alt="">
+            </div>
+
             О себе: <br>
             Занимаюсь живописью, потому что мне это нравится, это моя страсть. Люблю писать портреты, т.к. каждый человек индивидуален и хранит в себе много тайн. Когда пишу древность, то стараюсь сохранить историю для потомков. Стараюсь чаще выходить на пленэры, потому что в картинах созданных с натуры больше энергии и жизни.
+
+            <div class="bio-foto mb-3 mt-2">
+              <img src="img/bio/about (1).JPG" alt="">
+              <img src="img/bio/about (2).JPG" alt="">
+              <img src="img/bio/about (3).JPG" alt="">
+              <img src="img/bio/about (4).JPG" alt="">
+            </div>
           </div>
+
+          
           <!-- <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
@@ -187,7 +259,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                Портрет пишется маслом, пастелью, карандашом или другим материалом, исходя из Ваших интересов и поставленных задач.
+                Имею большой опыт в написании портретов. Люблю этот жанр, т.к. каждый человек индивидуален и хранит в себе много тайн.
+                <p class="mt-2">
+                  Портрет пишется по фотографии или с натуры (когда человек позирует художнику некоторое время).
+                </p>
+                
               </div>
               <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -235,7 +311,7 @@
             </a>
           </div>
         </div>
-        <p class="text-center"><a href="#">Загрузить ещё</a></p>
+        <p class="text-center"><a href="#">Смотреть ещё</a></p>
       </section>
       
       <!-- Поп-арт портреты -->
@@ -258,7 +334,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                Это портрет сделанный в современном стиле, с добавлением традиций живописи великих мастеров прошлого.
+                <p class="mb-2">
+                  Это портрет сделанный в современном стиле, с добавлением традиций живописи великих мастеров прошлого.
+                </p>
+                <p>
+                  Сначала делается печать портрета на холсте. После художник работает над картиной краской, добавляя моменты, которые не сделать дизайнеру на компьютере.
+                </p>
               </div>
               <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -306,7 +387,7 @@
             </a>
           </div>
         </div>
-        <p class="text-center"><a href="#">Загрузить ещё</a></p>
+        <p class="text-center"><a href="#">Смотреть ещё</a></p>
       </section>
 
       <!-- Фотографии с мастер-классов -->
@@ -329,8 +410,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                Картина маслом за 3 часа! <br>
-                Вместе со мной Вы напишете картину маслом на холсте.
+                Провожу мастер-классы.
+                Вместе со мной Вы напишете картину маслом на холсте за 3 часа.
               </div>
               <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -377,11 +458,35 @@
 
       <!-- Картины в наличии -->
       <section id="availability">
-          <h3 class="mb-3">Картины в наличии
-            <a href="#">
-              <img src="http://cdn.onlinewebfonts.com/svg/img_326455.png" alt="" style="max-height: 1.3rem;">
-            </a>
-          </h3>
+        <h3 class="mb-3">Картины в наличии
+          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 1.3rem;" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+          </a>
+        </h3>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel4">Картины в наличии</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Картины, которые можно приобрести, размещаю в <a href="https://photos.app.goo.gl/C21sTwSjcqbKzd1F9">Google Фото</a>. <br>
+                Также большинство работ, опубликованных в моём блоге инстаграм, доступны для продажи. <br>
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
           <div class="row">
       
             <div class="col-6 col-md-4 col-lg-3 mb-3" style="height: 170px;">
@@ -409,7 +514,7 @@
                 <img src="https://sun9-64.userapi.com/impf/c837137/v837137921/2faf3/MPxmWtE3h_c.jpg?size=1280x943&quality=96&sign=e77a362eb030aecfcee8545cd8eb1bfb&type=album" class="img-into-box">
               </a>
             </div>
-            <p class="text-center"><a href="#">Загрузить ещё</a></p>
+            <p class="text-center"><a href="#">Смотреть ещё</a></p>
       
           </div>
       </section>
@@ -420,7 +525,31 @@
   <!-- Награды -->
   <section class="py-5">
     <div class="container">
-      <h2 class="text-center h1 mb-4" style="text-transform: uppercase;">Награды</h2>
+      <h2 class="text-center h1 mb-4" style="text-transform: uppercase;">
+        Награды
+        <a href="#" data-bs-toggle="modal" data-bs-target="#awardsModal">
+          <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 1.6rem; vertical-align: baseline;" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>
+        </a>
+      </h2>
+
+      <!-- Modal -->
+      <div class="modal fade" id="awardsModal" tabindex="-1" aria-labelledby="awardsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="awardsModalLabel">Награды</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Мои награды и достижения размещаю в <a href="https://photos.app.goo.gl/C21sTwSjcqbKzd1F9">Google Фото</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="row">
         
         <div class="col-4 col-md-3 col-lg-2 mb-3 " style="height: 150px">
