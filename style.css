@@ -1,0 +1,70 @@
+/* .img-into-box {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+} */
+.box-height img {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 600px) {
+  .box-height img {
+    height: 150px;
+  }
+}
+.box-height2 img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 600px) {
+  .box-height2 img {
+    height: 130px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.bio-foto1 img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+
+/* Карусель - слайдшоу */
+.carousel-inner img {
+    object-fit: cover;
+    height: 400px;
+  }
+  @media (max-width: 600px) {
+    .carousel-inner img {
+      height: 300px;
+    }
+  }
+  @media (min-width: 1140px) {
+    .carousel-inner img {
+      height: 500px;
+    }
+  }
+
+
+
+.fancybox__container {
+  z-index: 1056 !important;
+}
+
+.pressa-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.awards-img img {
+  object-position: top;
+}
+.pressa-img a {
+  height: 150px;
+}

@@ -29,6 +29,10 @@
     height: 130px;
     object-fit: cover;
   }
+
+  .fancybox__container {
+    z-index: 1056 !important;
+  }
 </style>
 
 </head>
@@ -67,13 +71,14 @@
       </div>
     </div>
 
-    <div class="row g-2 row-cols-3 row-cols-md-4 row-cols-lg-6 box-height">
+    <div class="row g-2 row-cols-3 row-cols-md-4 row-cols-lg-6 box-height portrait-gallery">
 
       <div class="col">
         <a data-fancybox="gallery" href="../img/test/portraits/original/portrait_1.jpg">
           <img src="../img/test/portraits/thumbnails/portrait_1.jpg">
         </a>
       </div>
+
       <div class="col">
         <a data-fancybox="gallery" href="../img/test/portraits/original/portrait_2.jpg">
           <img src="../img/test/portraits/thumbnails/portrait_2.jpg">
@@ -95,14 +100,12 @@
         </a>
       </div>
       <div class="col">
-        <a data-fancybox="gallery" href="../img/test/portraits/original/portrait_99.jpg">
-          <img src="../img/test/portraits/thumbnails/portrait_99.jpg">
+        <a data-fancybox="gallery" href="../img/test/portraits/original/portrait_6.jpg">
+          <img src="../img/test/portraits/thumbnails/portrait_6.jpg">
         </a>
       </div>
-  
-
     </div>
-    <p class="text-center mt-2"><a href="#">Смотреть ещё</a></p>
+    <p class="text-center mt-2 show-more"><a href="#">Смотреть ещё</a></p>
   </section>
 </div>
 
@@ -175,6 +178,61 @@
       // wheel: "slide",
       },
   });
+</script>
+
+<script>
+  var filesShown = 6;
+  var filesAddedOnShowMore = 6;
+  var filesCount = 18;
+  var endOfFilesIndex = 99;
+  var endFileShown = false;
+  function getThubmnailUrl(id) {
+    return `../img/test/portraits/thumbnails/portrait_${id}.jpg`;
+  }
+  function getOriginalUrl(id) {
+    return `../img/test/portraits/original/portrait_${id}.jpg`;
+  }
+
+  function createPortraitElement(id) {
+    var thumbnail = getThubmnailUrl(id);
+    var original = getOriginalUrl(id);
+
+    var colEl = document.createElement('div');
+    colEl.classList.add('col');
+    var aEl = document.createElement('a');
+    aEl.setAttribute('data-fancybox', 'gallery');
+    aEl.href = original;
+
+    var imgEl = document.createElement('img');
+    imgEl.src = thumbnail;
+
+    aEl.appendChild(imgEl);
+    colEl.appendChild(aEl);
+
+    return colEl;
+  }
+
+  function DOMContentLoaded() {
+    var portraitGallery = document.querySelector('.portrait-gallery');
+
+    document.querySelector('.show-more')
+    .addEventListener('click', event => {
+      var targetFilesCount = filesShown + filesAddedOnShowMore;
+      for (var i = filesShown + 1; i <= targetFilesCount && i <= filesCount; i++) {
+        var portraitEl = createPortraitElement(i);
+        portraitGallery.appendChild(portraitEl);
+        filesShown++;
+      }
+      // if (filesShown >= filesCount && !endFileShown) {
+      //   var endEl = document.querySelector('.end')
+      //   var portraitEl = createPortraitElement(endOfFilesIndex);
+      //   portraitGallery.appendChild(portraitEl);
+      //   endFileShown = true;
+      // }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", DOMContentLoaded);
 </script>
 
 </body>
