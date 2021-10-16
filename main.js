@@ -415,22 +415,22 @@ function DOMContentLoaded_available() {
 // document.addEventListener("DOMContentLoaded", DOMContentLoaded_available);
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   DOMContentLoaded_portrait();
-//   DOMContentLoaded_popart();
-//   DOMContentLoaded_landscape()
-//   DOMContentLoaded_stilllife()
-//   DOMContentLoaded_church()
-//   DOMContentLoaded_wall()
-//   DOMContentLoaded_mk()
-//   DOMContentLoaded_available()
-// });
+document.addEventListener("DOMContentLoaded", function() {
+  DOMContentLoaded_portrait();
+  DOMContentLoaded_popart();
+  DOMContentLoaded_landscape()
+  DOMContentLoaded_stilllife()
+  DOMContentLoaded_church()
+  DOMContentLoaded_wall()
+  DOMContentLoaded_mk()
+  DOMContentLoaded_available()
+});
 
-DOMContentLoaded_portrait();
-DOMContentLoaded_popart();
-DOMContentLoaded_landscape()
-DOMContentLoaded_stilllife()
-DOMContentLoaded_church()
-DOMContentLoaded_wall()
-DOMContentLoaded_mk()
-DOMContentLoaded_available()
+// DOMContentLoaded_portrait();
+// DOMContentLoaded_popart();
+// DOMContentLoaded_landscape()
+// DOMContentLoaded_stilllife()
+// DOMContentLoaded_church()
+// DOMContentLoaded_wall()
+// DOMContentLoaded_mk()
+// DOMContentLoaded_available()
