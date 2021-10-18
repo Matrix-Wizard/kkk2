@@ -1,3 +1,16 @@
+let images = document.querySelectorAll("img");
+lazyload(images);
+
+
+
+Fancybox.bind('[data-fancybox]', {
+  Thumbs: false,
+});
+
+
+
+
+
 var filesAddedOnShowMore = 6;
 
 

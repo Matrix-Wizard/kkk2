@@ -68,3 +68,17 @@ h1, h2, h3, h4, h5, h6 {
 .pressa-img a {
   height: 150px;
 }
+
+/* Для смотреть ещё */
+.btn-link:focus {
+  box-shadow: none;
+}
+
+
+/* Для lazy load */
+img[data-src] {
+  opacity: 0 !important;
+}
+img[src] {
+  opacity: 1 !important;
+}
